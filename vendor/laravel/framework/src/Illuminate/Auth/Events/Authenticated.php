@@ -4,6 +4,7 @@ namespace Illuminate\Auth\Events;
 
 use Illuminate\Queue\SerializesModels;
 
+
 class Authenticated
 {
     use SerializesModels;

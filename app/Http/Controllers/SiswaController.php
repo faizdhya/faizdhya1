@@ -38,7 +38,7 @@ class SiswaController extends Controller
     {
         // validate form
         $validated = $request->validate([
-            'nama' =>'required|string|max:250',
+            'name' =>'required|string|max:250',
             'email' =>'required|email|max:250|unique:users',
             'password' =>'required|min:8|confirmed',
             'image' =>'required|image|mimes:jpeg,png,jpg|max:2048',
@@ -59,7 +59,7 @@ class SiswaController extends Controller
         // create post
         Siswa::create([
             'id_user' => $id_akun,
-            'iamge' => $image->hashName(),
+            'image' => $image->hashName(),
             'nis' => $request->nis,
             'tingkatan' => $request->tingkatan,
             'jurusan' => $request->jurusan,

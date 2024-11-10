@@ -19,8 +19,8 @@
         <input type="submit" value="Cari">
     </form>
     <br><br>
-    <a href="{{ route('siswa.create') }}">Tambah Siswa</a>  
-
+    
+    <a href="{{ route('siswa.create') }}">Tambah Siswa</a> 
     @if(Session::has('success'))
     <div class="alert alert-success" role="alert">
     {{ Session::get('success') }}
@@ -41,14 +41,14 @@
         @forelse ($siswas as $siswa)
         <tr>
             <td>
-                <img src="{{ asset('storage/siswas/'.$siswa->iamge) }}" width="120px" height="120px" alt="">
+                <img src="{{ asset('storage/siswas/'.$siswa->image) }}" width="120px" height="120px" alt="">
             </td>
             <td>{{ $siswa->nis }}</td>
             <td>{{ $siswa->name }}</td>
             <td>{{ $siswa->email }}</td>
             <td>{{ $siswa->tingkatan }} {{ $siswa->jurusan }} {{ $siswa->kelas }}</td>
             <td>{{ $siswa->hp }}</td>
-            @if ($siswa->status == 1) :
+            @if ($siswa->status == 1)
             <td>Aktif</td>
             @else
             <td>Tidak Aktif</td>

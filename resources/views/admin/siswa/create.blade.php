@@ -35,7 +35,7 @@
 
          <label for="password_confirmation" class="col-md-4 col-form-label text-md-end text-start">Confirm Password</label>
          <div class="col-md-6">
-            <input type="password" class="form-control" name="password-confirmation" id="password-confirmation">
+            <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
          </div>
          <br><br>
          
@@ -71,10 +71,10 @@
          <label>kelas</label>
          <select name="kelas" required>
             <option value="">Pilih Kelas</option>
-            <option value="TBSM">1</option>
-            <option value="TJKT">2</option>
-            <option value="PPLG">3</option>
-            <option value="DKV">4</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
          </select>
          <br><br>
 

@@ -56,7 +56,7 @@ class SiswaController extends Controller
         $image = $request->file('image');
 
         // jika config private true
-        $image->storeAs('public/siswas', $image->hashName());
+        $imagePath = $image->storeAs('siswas', $image->hashName(), 'public');
 
         $id_akun = $this->insertAccount($request->name, $request->email, $request->password);
 
@@ -97,7 +97,7 @@ class SiswaController extends Controller
             ->join('users', 'siswas.id_user', '=', 'users.id')
             ->select(
                 'siswas.*',
-                'users.name',
+                'users.name', 
                 'users.email'
             )
             ->where('siswas.id', $id)
